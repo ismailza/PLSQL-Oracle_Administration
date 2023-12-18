@@ -1,19 +1,6 @@
 
 DECLARE
-  TYPE emp_rec_type IS RECORD (
-    employee_id employees.employee_id%TYPE,
-    last_name employees.last_name%TYPE,
-    first_name employees.first_name%TYPE,
-    email employees.email%TYPE,
-    phone_number employees.phone_number%TYPE,
-    hire_date employees.hire_date%TYPE,
-    job_id employees.job_id%TYPE,
-    salary employees.salary%TYPE,
-    commission_pct employees.commission_pct%TYPE,
-    manager_id employees.manager_id%TYPE,
-    department_id employees.department_id%TYPE
-  );
-  emp_rec emp_rec_type;
+  emp_rec employees%ROWTYPE;
   emp_matricule employees.employee_id%TYPE := &v_matricule;
   emp_email employees.email%TYPE := &v_email;
   emp_salaire employees.salary%TYPE := &v_salaire;
